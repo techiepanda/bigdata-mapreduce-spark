@@ -18,7 +18,7 @@ def getFrquencyMap(fileContent):
                 
                 postString = postData[postData.find("<post>")+ len("<post>"):].lower()
                 # Replacing punctuations with spaces
-                postString = postString.replace("{", " ").replace("}", " ").replace(".", " ").replace("*", " ").replace(":", " ").replace("-", " ").replace("!", " ").replace("'", " ").replace(":", " ").replace("(", " ").replace(")", " ").replace("[", " ").replace("]", " ").replace("?", " ").replace('"', " ").replace("`", " ").replace(",", " ").replace('/', " ")
+                postString = postString.replace("{", " ").replace("}", " ").replace(".", " ").replace("*", " ").replace(":", " ").replace("-", " ").replace("!", " ").replace("'", " ").replace(";", " ").replace("(", " ").replace(")", " ").replace("[", " ").replace("]", " ").replace("?", " ").replace('"', " ").replace("`", " ").replace(",", " ").replace('/', " ")
                 for industry in industriesBC.value:   # Search for industry names in data
                     count = postString.split(" ").count(industry.lower())  # Split is needed so that it can count exact words
                     if count > 0:
